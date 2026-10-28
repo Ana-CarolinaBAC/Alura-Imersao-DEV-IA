@@ -1,75 +1,32 @@
-# 🧮 Calculadora em Linha de Comando (Python)
 
-Uma calculadora simples, interativa e robusta desenvolvida em Python para execução no terminal. O projeto realiza as 4 operações aritméticas básicas e conta com tratamento de exceções para garantir que o programa não seja interrompido por entradas inválidas.
-Feita como -Desafio do Dia- para a Imersão Dev: Engenharia de Software na era da IA; by Alura
-Utilizou-se o GOOGLE IA Studio para criar esta Calculadora, afim de se familiarizar com essa funcionalidade e aprender os fundamentos da linguagem PYTHON
----
+🧮 Calculadora Básica em Python
 
-## ✨ Funcionalidades
+Uma aplicação interativa de terminal desenvolvida em Python para a realização de operações matemáticas fundamentais e cálculo de porcentagens.
+Projetada com foco em boas práticas de programação, clareza de código, tratamento de erros e modularidade — ideal para estudos e iniciantes na linguagem.
 
-- ➕ **Adição**
-- ➖ **Subtração**
-- ✖️ **Multiplicação**
-- ➗ **Divisão** (com proteção contra divisão por zero)
-- 🔁 **Execução contínua:** faça vários cálculos sem precisar reiniciar o script
-- 🛡️ **Tratamento de erros:** previne falhas caso o usuário digite letras ou símbolos em vez de números
+🚀 Funcionalidades
 
----
+• ➕ Adição (+): Soma entre dois valores numéricos.
+• ➖ Subtração (-): Diferença entre dois valores numéricos.
+• ✖️ Multiplicação (*): Produto entre dois valores numéricos.
+• ➗ Divisão (/): Quociente com validação automática contra divisão por zero.
+• 📊 Porcentagem (%) (Nova Funcionalidade): Cálculo direto de \(X\%\) sobre um valor base \(Y\) (\(\frac{Y\times X}{100}\)).
+• 🛡️ Tratamento de Exceções: Proteção contra entradas não numéricas (ValueError) e opções inválidas de menu.
 
-## 🛠️ Tecnologias Utilizadas
+🏅 O Desafio (Imersão Dev Alura)
 
-- **Python 3**
-- Nenhuma biblioteca externa necessária (utiliza apenas os módulos nativos da linguagem).
+Este projeto foi atualizado e expandido como parte do Desafio 2 da Imersão Dev da Alura.
+O objetivo do desafio era exercitar a lógica de programação e a manipulação de operadores aritméticos, propondo que o aluno fosse além das quatro operações básicas da calculadora criada em aula. A missão consistia em compreender as necessidades do usuário, estruturar o fluxo de dados e implementar com sucesso uma nova funcionalidade matemática utilitária, garantindo a robustez do software.
 
----
+💡 A Melhoria Aplicada (Cálculo de Porcentagem)
 
-## 🚀 Como Executar o Projeto
-
-### Pré-requisitos
-Ter o [Python 3](https://www.python.org/) instalado em seu computador.
-
-### Passo a passo
-
-1. **Clone este repositório:**
-   ```bash
-   git clone https://github.com/SEU-USUARIO/calculadora-python.git
-   ```
-
-2. **Acesse a pasta do projeto:**
-   ```bash
-   cd calculadora-python
-   ```
-
-3. **Execute o script:**
-   ```bash
-   python calculadora.py
-   ```
-
----
-
-## 💻 Exemplo de Uso
-
-```text
-================================
-       CALCULADORA PYTHON       
-================================
-  [1] Adição (+)
-  [2] Subtração (-)
-  [3] Multiplicação (*)
-  [4] Divisão (/)
-  [0] Sair
-================================
-Escolha uma opção (0 a 4): 1
-
-Digite o 1º número: 15
-Digite o 2º número: 27
---------------------------------
-Resultado: 15.0 + 27.0 = 42.0
---------------------------------
-```
-
----
-
-## 👨‍💻 Autor
-
-Desenvolvido por **[Ana Carolina BAC]**  
+Como resposta ao desafio proposto, foi implementada a operação de porcentagem, mantendo toda a compatibilidade, tratamento de erros e o estilo original do projeto:
+1. Função Pura e Isolada (porcentagem):python
+def porcentagem(valor: float, taxa: float) -> float:
+    """Calcula a porcentagem de um valor (ex: taxa% de valor)."""
+    return (valor * taxa) / 100
+Use o código com cuidado.
+2. Interface Amigável: Quando a opção [5] é selecionada, os prompts do terminal orientam o usuário com perguntas claras:
+	• Digite o valor base:
+	• Digite a porcentagem desejada (%):
+3. Exibição Formatada: Apresenta a relação direta de forma legível e profissional (ex: 15.0% de 200.0 = 30.0).

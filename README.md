@@ -106,7 +106,7 @@ Para que qualquer pessoa possa testar seu projeto pelo link na web:
 
 ## 🎓 Autor
 
-Projeto desenvolvido com 💜 por **Marco** durante o **Desafio 3 da Imersão Dev da Alura**!
+Projeto desenvolvido com 💜 por **Ana Carolina BAC** durante o **Desafio 3 da Imersão Dev da Alura**!
 
 - **LinkedIn**: [Adicione seu link do LinkedIn aqui](https://linkedin.com)
 - **GitHub**: [Adicione seu perfil do GitHub aqui](https://github.com)

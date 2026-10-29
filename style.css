@@ -1,0 +1,256 @@
+/* ==========================================================================
+   Minha Lista de Tarefas - Estilos (CSS)
+   Aqui definimos as cores, tamanhos, espaçamentos e efeitos visuais da página.
+   ========================================================================== */
+
+/* 1. RESET E CONFIGURAÇÕES BÁSICAS
+   Garante que todos os navegadores comecem com as mesmas margens e proporções. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* 2. CORPO DA PÁGINA (BODY)
+   Centraliza o aplicativo no meio da tela com um fundo suave. */
+body {
+  background-color: #f1f5f9; /* Fundo cinza bem claro */
+  color: #334155;            /* Texto cinza escuro para melhor legibilidade */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px;
+}
+
+/* 3. CARTÃO PRINCIPAL (APP CONTAINER)
+   O cartão branco que envolve todo o aplicativo. */
+.app-container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 520px;          /* Limita a largura para ficar elegante */
+  border-radius: 16px;       /* Cantos arredondados */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); /* Sombra suave */
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 4. CABEÇALHO (HEADER) */
+.app-header h1 {
+  font-size: 1.6rem;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.app-header .subtitulo {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* 5. ÁREA DE ENTRADA (INPUT E BOTÃO ADICIONAR) */
+.campo-grupo {
+  display: flex;
+  gap: 10px;
+}
+
+.campo-grupo input {
+  flex: 1;                   /* Ocupa todo o espaço disponível restante */
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+/* Efeito ao focar no campo de digitação */
+.campo-grupo input:focus {
+  border-color: #3b82f6;     /* Borda azul ao clicar */
+}
+
+/* Botão principal (Adicionar) */
+.btn-primario {
+  background-color: #3b82f6; /* Fundo azul */
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 0 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-primario:hover {
+  background-color: #2563eb; /* Azul um pouco mais escuro ao passar o mouse */
+}
+
+.btn-primario:active {
+  transform: scale(0.98);    /* Efeito de clique físico */
+}
+
+/* 6. RESUMO E CONTADOR */
+.resumo-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #64748b;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.btn-texto {
+  background: none;
+  border: none;
+  color: #ef4444;            /* Vermelho */
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-texto:hover {
+  background-color: #fee2e2;
+}
+
+/* 7. LISTA DE TAREFAS (UL E LI) */
+.lista-tarefas {
+  list-style: none;          /* Remove as bolinhas padrões de lista */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Cada item individual da lista (estilo base comum) */
+.tarefa-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 12px 16px;
+  gap: 12px;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  transition: all 0.25s ease; /* Transição suave quando o status mudar */
+}
+
+/* --- TAREFA PENDENTE (EM ABERTO) --- */
+.tarefa-item:not(.concluida) {
+  border-left: 4px solid #3b82f6; /* Destaque azul na lateral esquerda */
+  background-color: #ffffff;
+}
+
+.tarefa-item:not(.concluida):hover {
+  border-color: #93c5fd;
+  border-left-color: #2563eb;
+  transform: translateY(-1px);    /* Leve elevação ao passar o mouse */
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.08);
+}
+
+.tarefa-item:not(.concluida) .tarefa-texto {
+  color: #0f172a;                 /* Texto bem legível e nítido */
+  font-weight: 500;
+}
+
+/* --- TAREFA CONCLUÍDA (FINALIZADA) --- */
+.tarefa-item.concluida {
+  border-left: 4px solid #10b981; /* Destaque verde na lateral esquerda */
+  border-color: #bbf7d0;          /* Borda suave esverdeada */
+  background-color: #f0fdf4;      /* Fundo verde bem clarinho (sensação de sucesso) */
+}
+
+.tarefa-item.concluida .tarefa-texto {
+  text-decoration: line-through;  /* Linha riscando o texto da atividade */
+  color: #15803d;                 /* Tom de verde mais escuro e atenuado */
+  opacity: 0.75;
+}
+
+/* Lado esquerdo do item (checkbox + texto) */
+.tarefa-conteudo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  cursor: pointer;
+}
+
+/* Checkbox (caixa de seleção) */
+.tarefa-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #10b981;          /* Cor verde quando marcado */
+}
+
+/* Texto da tarefa */
+.tarefa-texto {
+  font-size: 0.95rem;
+  word-break: break-word;         /* Quebra palavras longas para não estourar a tela */
+  transition: all 0.25s ease;
+}
+
+/* Lado direito do item (tag de status + botão remover) */
+.tarefa-acoes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Tags/Etiquetas visuais de status */
+.tag-status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 9999px;          /* Formato pílula */
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  user-select: none;
+  transition: all 0.25s ease;
+}
+
+.tag-pendente {
+  background-color: #eff6ff;      /* Fundo azul bem suave */
+  color: #2563eb;                 /* Texto azul */
+  border: 1px solid #bfdbfe;
+}
+
+.tag-concluida {
+  background-color: #dcfce7;      /* Fundo verde bem suave */
+  color: #15803d;                 /* Texto verde */
+  border: 1px solid #86efac;
+}
+
+/* Botão de remover tarefa */
+.btn-remover {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-remover:hover {
+  color: #ef4444;                 /* Fica vermelho ao passar o mouse */
+  background-color: #fee2e2;
+}
+
+/* 8. MENSAGEM DE LISTA VAZIA */
+.mensagem-vazia {
+  text-align: center;
+  padding: 30px 10px;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}

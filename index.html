@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Lista de Tarefas</title>
+  
+  <!-- Arquivo de estilos (CSS) que define a aparência da página -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Contêiner principal que centraliza o conteúdo na tela -->
+  <main class="app-container">
+    
+    <!-- Cabeçalho com o título da aplicação -->
+    <header class="app-header">
+      <h1>Minha Lista de Tarefas</h1>
+      <p class="subtitulo">Adicione, conclua e organize o seu dia a dia</p>
+    </header>
+
+    <!-- Área de entrada: onde o usuário digita uma nova tarefa -->
+    <section class="entrada-section">
+      <div class="campo-grupo">
+        <input 
+          type="text" 
+          id="inputTarefa" 
+          placeholder="Digite o que precisa fazer..." 
+          autocomplete="off"
+        >
+        <button id="btnAdicionar" class="btn-primario">
+          Adicionar
+        </button>
+      </div>
+    </section>
+
+    <!-- Resumo rápido com a contagem de tarefas -->
+    <section class="resumo-section">
+      <span id="contadorTarefas">0 tarefas cadastradas</span>
+      <button id="btnLimparConcluidas" class="btn-texto" style="display: none;">
+        Limpar concluídas
+      </button>
+    </section>
+
+    <!-- Lista onde os itens de tarefas serão inseridos pelo JavaScript -->
+    <section class="lista-section">
+      <ul id="listaTarefas" class="lista-tarefas">
+        <!-- Os itens <li> serão inseridos aqui dinamicamente -->
+      </ul>
+
+      <!-- Mensagem exibida quando a lista estiver vazia -->
+      <div id="mensagemVazia" class="mensagem-vazia">
+        <p>Nenhuma tarefa por aqui ainda. Adicione uma acima!</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Arquivo de script (JavaScript) que contém a lógica da aplicação -->
+  <script src="app.js"></script>
+</body>
+</html>

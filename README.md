@@ -84,7 +84,7 @@ Não é necessário instalar nada:
 
 1. Clone ou baixe este repositório:
    ```bash
-   git clone https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git
+   git clone https://github.com/Ana-CarolinaBAC/Alura-Imersao-DEV-IA.git
    ```
 2. Acesse a pasta do projeto.
 3. Dê **dois cliques** no arquivo [`index.html`](file:///c:/Users/marco/OneDrive/Projeto%20To%20do%20list/index.html) para abrir diretamente no seu navegador.
@@ -108,11 +108,8 @@ Para que qualquer pessoa possa testar seu projeto pelo link na web:
 
 Projeto desenvolvido com 💜 por **Ana Carolina BAC** durante o **Desafio 3 da Imersão Dev da Alura**!
 
-- **LinkedIn**: [Adicione seu link do LinkedIn aqui](https://linkedin.com)
-- **GitHub**: [Adicione seu perfil do GitHub aqui](https://github.com)
+
 
 ---
 
-## 📄 Licença
 
-Este projeto está sob a licença [MIT](LICENSE).
